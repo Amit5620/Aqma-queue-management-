@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import "../styles/ItemManagement.css"
+import "../styles/itemManagement.css"
 
 const API_URL = 'http://localhost:8000/api'
 
