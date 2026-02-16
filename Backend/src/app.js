@@ -41,6 +41,7 @@ console.log('🔑 App.js JWT_SECRET:', JWT_SECRET)
 app.use(cors({
     origin: [
         process.env.CORS_ORIGIN,
+        'https://aqma-queue-management.vercel.app',  // 👈 ADD THIS
         'http://localhost:5173',
         'http://localhost:5174',
         'http://localhost:5175',
@@ -50,6 +51,7 @@ app.use(cors({
         'http://127.0.0.1:5175',
         'http://127.0.0.1:3000'
     ].filter(Boolean),
+
     credentials: true,
     allowedHeaders: ['Content-Type', 'Authorization', 'authorization', 'user-role', 'x-requested-with'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
