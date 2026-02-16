@@ -1,6 +1,6 @@
 import { getCurrentSession } from './session'
 
-const API_BASE_URL = 'http://localhost:8000/api'
+const API_BASE_URL = `${import.meta.env.VITE_API_URL}/api`
 
 export async function login(username, password) {
   const response = await fetch(`${API_BASE_URL}/auth/login`, {
@@ -28,14 +28,4 @@ export async function validateToken(token) {
     throw new Error('Token validation failed')
   }
   return await response.json()
-}
-
-export function getAuthHeader() {
-  const { token } = getCurrentSession()
-  return token ? { Authorization: `Bearer ${token}` } : {}
-}
-
-export function getUserInfo() {
-  const { user } = getCurrentSession()
-  return user
 }
