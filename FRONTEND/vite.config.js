@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   server:{
     proxy: {
-      '/api':'http://localhost:8000',
+      '/api':'https://aqma-queue-management-1.onrender.com',
     },
     // Configure CORS for WebSocket connections
     cors: true,
