@@ -33,7 +33,7 @@ function VendorProfile() {
       setError(""); // Clear previous errors
 
       const response = await axios.get(
-        `http://localhost:8000/api/vendor-management/profile`,
+        `https://aqma-queue-management-1.onrender.com/api/vendor-management/profile`,
         { headers: authHeaders() }
       );
 
@@ -105,7 +105,7 @@ function VendorProfile() {
 
     try {
       const response = await axios.put(
-        `http://localhost:8000/api/users/change-password`,
+        `https://aqma-queue-management-1.onrender.com/api/users/change-password`,
         {
           currentPassword: passwordData.currentPassword,
           newPassword: passwordData.newPassword,
