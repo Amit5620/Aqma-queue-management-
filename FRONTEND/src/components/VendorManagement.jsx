@@ -1,6 +1,7 @@
+VITE_API_URL='https://aqma-queue-management-1.onrender.com'
 import { useState, useEffect, useCallback } from 'react'
 import "../styles/VendorManagement.css";
-import { getAuthHeader } from '../services/auth'
+import { getAuthHeader } from '../services/auth.js'
 import { validatePhone, validateEmail, validateRequired, validateCategoryId } from '../utils/validation'
 
 function VendorManagement() {
@@ -14,7 +15,7 @@ function VendorManagement() {
     const [activeTab, setActiveTab] = useState('vendors')
 
     // API Configuration
-    const API_BASE_URL = 'https://aqma-queue-management-1.onrender.com/api/vendor-management'
+    const API_BASE_URL = VITE_API_URL + '/api/vendor-management'
     const OFFLINE_MODE = false
 
     // Helper function to get auth headers
