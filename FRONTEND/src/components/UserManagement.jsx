@@ -209,7 +209,7 @@ function UserManagement({ vendorId: propVendorId }) {
       if (userRole === 'vendor') {
         url = `https://aqma-queue-management-1.onrender.com/api/vendor-management/profile`;
       } else if (userRole === 'superadmin' && vendorId) {
-        url = `http://localhost:8000/api/vendor-management/vendors/${vendorId}`;
+        url = `https://aqma-queue-management-1.onrender.com/api/vendor-management/vendors/${vendorId}`;
       } else {
         // ✅ FIXED: Don't log undefined, just skip silently
         console.log('⚠️ User role not vendor/superadmin:', userRole || 'undefined');
@@ -406,7 +406,7 @@ function UserManagement({ vendorId: propVendorId }) {
       if (editingUser) {
         console.log('📝 Updating existing user:', editingUser.id);
         response = await axios.put(
-          `http://localhost:8000/api/users/vendor/${vendorIdParam}/${editingUser.id}`,
+          `https://aqma-queue-management-1.onrender.com/api/users/vendor/${vendorIdParam}/${editingUser.id}`,
           userData,
           { headers: authHeaders() }
         );
