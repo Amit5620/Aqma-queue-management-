@@ -1,6 +1,6 @@
 import { getCurrentSession } from './session'
 
-const API_BASE_URL = `${import.meta.env.VITE_API_URL}/api`
+const API_BASE_URL = `https://aqma-queue-management-1.onrender.com/api`
 
 export async function login(username, password) {
   const response = await fetch(`${API_BASE_URL}/auth/login`, {
