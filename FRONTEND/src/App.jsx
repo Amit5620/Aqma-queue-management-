@@ -22,7 +22,8 @@ const PrivateRoute = ({ children, isLoggedIn }) => {
 }
 
 // Configure axios base URL only. Headers will be set per-request.
-axios.defaults.baseURL = 'http://localhost:8000'
+// axios.defaults.baseURL = 'http://localhost:8000'
+axios.defaults.baseURL = import.meta.env.VITE_API_URL
 
 function App() {
   const [username, setUsername] = useState('')
