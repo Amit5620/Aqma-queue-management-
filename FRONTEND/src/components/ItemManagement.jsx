@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import "../styles/itemManagement.css"
 
-const API_URL = 'http://localhost:8000/api'
+const API_URL = 'https://aqma-queue-management-1.onrender.com/api'
 
 function ItemManagement({ vendorId }) {
   const [items, setItems] = useState([])
