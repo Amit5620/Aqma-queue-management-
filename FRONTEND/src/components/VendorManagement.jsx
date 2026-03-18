@@ -1,4 +1,4 @@
-VITE_API_URL='https://aqma-queue-management-1.onrender.com'
+// VITE_API_URL='https://aqma-queue-management-1.onrender.com'
 import { useState, useEffect, useCallback } from 'react'
 import "../styles/VendorManagement.css";
 import { getAuthHeader } from '../services/auth.js'
