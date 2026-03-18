@@ -13,7 +13,7 @@ class WebSocketService {
     // WebSocket URL - matches backend server port
     // Prefer env override if provided via Vite
     const wsFromEnv = typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_WS_URL
-    this.serverUrl = wsFromEnv || 'ws://localhost:8000'
+    this.serverUrl = wsFromEnv || 'https://aqma-queue-management-1.onrender.com'
   }
 
   // Decide whether to use real WebSocket or simulation
