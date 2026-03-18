@@ -4,7 +4,7 @@ import { getCurrentSession } from '../services/session';
 import '../styles/CustomerCounterDashboard.css';
 
 // Set axios base URL
-axios.defaults.baseURL = 'http://localhost:8000';
+axios.defaults.baseURL = 'https://aqma-queue-management-1.onrender.com';
 
 function CustomerCounterDashboard({ activeCounter = 1, userProfile }) {
   const [tokens, setTokens] = useState([]);
