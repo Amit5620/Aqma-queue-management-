@@ -29,3 +29,13 @@ export async function validateToken(token) {
   }
   return await response.json()
 }
+
+export function getAuthHeader() {
+  const { token } = getCurrentSession()
+  return token ? { Authorization: `Bearer ${token}` } : {}
+}
+
+export function getUserInfo() {
+  const { user } = getCurrentSession()
+  return user
+}
