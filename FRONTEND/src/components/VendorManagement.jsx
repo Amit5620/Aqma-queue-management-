@@ -14,7 +14,7 @@ function VendorManagement() {
     const [activeTab, setActiveTab] = useState('vendors')
 
     // API Configuration
-    const API_BASE_URL = 'http://localhost:8000/api/vendor-management'
+    const API_BASE_URL = 'https://aqma-queue-management-1.onrender.com/api/vendor-management'
     const OFFLINE_MODE = false
 
     // Helper function to get auth headers
