@@ -175,7 +175,7 @@ function App() {
 
       // Enhanced error handling
       if (error.code === 'ECONNREFUSED' || error.code === 'ERR_NETWORK') {
-        setError('Cannot connect to server. Please make sure the backend server is running on http://localhost:8000')
+        setError('Cannot connect to server. Please make sure the backend server is running.')
       } else if (error.code === 'ECONNABORTED' || error.message.includes('timeout')) {
         setError('Request timeout. Server took too long to respond. Please try again.')
       } else if (error.response) {
