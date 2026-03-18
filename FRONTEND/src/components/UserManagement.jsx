@@ -42,7 +42,7 @@ function UserManagement({ vendorId: propVendorId }) {
         console.log('🔍 Fetching counters for vendor:', vendorId);
 
         const response = await axios.get(
-          `http://localhost:8000/api/counters`,
+          `https://aqma-queue-management-1.onrender.com/api/counters`,
           { headers: authHeaders() }
         );
 
