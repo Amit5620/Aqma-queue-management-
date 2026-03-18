@@ -94,7 +94,7 @@ function UserManagement({ vendorId: propVendorId }) {
     if (currentUser?.role !== 'vendor') {
       try {
         const response = await axios.get(
-          `http://localhost:8000/api/counters`,
+          `https://aqma-queue-management-1.onrender.com/api/counters`,
           { headers: authHeaders() }
         );
 
@@ -112,7 +112,7 @@ function UserManagement({ vendorId: propVendorId }) {
     if (currentUser?.role !== 'vendor') {
       try {
         const response = await axios.get(
-          `http://localhost:8000/api/cabins`,
+          `https://aqma-queue-management-1.onrender.com/api/cabins`,
           { headers: authHeaders() }
         );
 
@@ -132,7 +132,7 @@ function UserManagement({ vendorId: propVendorId }) {
         console.log('🔍 Fetching cabins for vendor:', vendorId);
 
         const response = await axios.get(
-          `http://localhost:8000/api/cabins`,
+          `https://aqma-queue-management-1.onrender.com/api/cabins`,
           { headers: authHeaders() }
         );
 
@@ -180,7 +180,7 @@ function UserManagement({ vendorId: propVendorId }) {
       setIsLoading(true);
       const vendorIdParam = vendorId || 'null';
       const response = await axios.get(
-        `http://localhost:8000/api/users/vendor/${vendorIdParam}`,
+        `https://aqma-queue-management-1.onrender.com/api/users/vendor/${vendorIdParam}`,
         { headers: authHeaders() }
       );
 
@@ -207,7 +207,7 @@ function UserManagement({ vendorId: propVendorId }) {
 
       let url;
       if (userRole === 'vendor') {
-        url = `http://localhost:8000/api/vendor-management/profile`;
+        url = `https://aqma-queue-management-1.onrender.com/api/vendor-management/profile`;
       } else if (userRole === 'superadmin' && vendorId) {
         url = `http://localhost:8000/api/vendor-management/vendors/${vendorId}`;
       } else {
@@ -400,7 +400,7 @@ function UserManagement({ vendorId: propVendorId }) {
       console.log('📤 Final user data to submit:', JSON.stringify(userData, null, 2));
 
       const vendorIdParam = vendorId || 'null';
-      console.log('🔗 API URL:', `http://localhost:8000/api/users/vendor/${vendorIdParam}`);
+      console.log('🔗 API URL:', `https://aqma-queue-management-1.onrender.com/api/users/vendor/${vendorIdParam}`);
 
       let response;
       if (editingUser) {
@@ -413,7 +413,7 @@ function UserManagement({ vendorId: propVendorId }) {
       } else {
         console.log('➕ Creating new user');
         response = await axios.post(
-          `http://localhost:8000/api/users/vendor/${vendorIdParam}`,
+          `https://aqma-queue-management-1.onrender.com/api/users/vendor/${vendorIdParam}`,
           userData,
           { headers: authHeaders() }
         );
@@ -456,7 +456,7 @@ function UserManagement({ vendorId: propVendorId }) {
     try {
       const vendorIdParam = vendorId || 'null';
       const response = await axios.delete(
-        `http://localhost:8000/api/users/vendor/${vendorIdParam}/${userId}`,
+        `https://aqma-queue-management-1.onrender.com/api/users/vendor/${vendorIdParam}/${userId}`,
         { headers: authHeaders() }
       );
       if (response.data.success) {
@@ -474,7 +474,7 @@ function UserManagement({ vendorId: propVendorId }) {
       const newStatus = user.isActive !== false ? false : true;
 
       const response = await axios.put(
-        `http://localhost:8000/api/users/vendor/${vendorIdParam}/${user.id}`,
+        `https://aqma-queue-management-1.onrender.com/api/users/vendor/${vendorIdParam}/${user.id}`,
         {
           ...user,
           isActive: newStatus
