@@ -4,7 +4,7 @@ import { getAuthHeader } from '../services/auth'
 import '../styles/TokenManagement.css'
 import webSocketService from '../services/WebSocketService'
 
-axios.defaults.baseURL = 'http://localhost:8000'
+axios.defaults.baseURL = 'https://aqma-queue-management-1.onrender.com/'
 
 function ActiveTokensTable({ vendorId, counterId, userProfile, userRole }) {
   const [tokens, setTokens] = useState([])
