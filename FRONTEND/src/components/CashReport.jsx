@@ -20,7 +20,7 @@ import {
 } from 'chart.js'
 import '../styles/CashReport.css'
 
-const API_BASE_URL = 'http://localhost:8000/api'
+const API_BASE_URL = 'https://aqma-queue-management-1.onrender.com/api'
 
 ChartJS.register(
   ArcElement,
