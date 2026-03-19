@@ -3,7 +3,7 @@ import axios from 'axios';
 import { getCurrentSession } from '../services/session';
 import '../styles/CustomerCounterDashboard.css';
 
-axios.defaults.baseURL = 'http://localhost:8000';
+axios.defaults.baseURL = 'https://aqma-queue-management-1.onrender.com/';
 
 function CabinDashboard({ activeCabin = 1, userProfile }) {
   const [tokens, setTokens] = useState([]);
